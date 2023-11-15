@@ -4,13 +4,12 @@ import ReactDOM from "react-dom";
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
-
-//import your own components
-import SecondsCounter from "./component/home.jsx";
+import Home from "./component/home";
 let counter = 0
+//import your own components
 //render your react application
 setInterval(function() {
-    ReactDOM.render(<SecondsCounter seconds={counter}/>, document.querySelector("#app"))
+    ReactDOM.render(<Home seconds={counter}/>, document.querySelector("#app"))
     counter++
 },
 1000)
